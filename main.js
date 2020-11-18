@@ -9,7 +9,7 @@ client.once('ready', () => {
 });
 
 client.on('message', async message => {
-    if(message.channel.name === 'community-suggestions'){
+    if(message.channel.name === 'community-suggestions' || message.channel.name === 'suggestions' || message.channel.name === 'league-suggestions'){
 		try {
             await message.react('⬆️');
             await message.react('⬇️');
