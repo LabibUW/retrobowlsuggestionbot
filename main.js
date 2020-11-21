@@ -31,7 +31,7 @@ client.on('message', async message => {
 
 
         count++;
-        if(count == SUGGESTION_MESSAGE_BREAK + 1) {
+        if(count == SUGGESTION_MESSAGE_BREAK + 1  && message.channel.name == 'community-suggestions') {
             channel = client.channels.cache.get('775745410353332294');
             // channel.send('Before posting a new suggestion, please read through the previous suggestions in <#775745410353332294> and <#704484560758374471> to avoid repeat suggestions.\n\nPlease **DO NOT** suggest to play as the defense or an Online mode. ');
 
