@@ -10,7 +10,7 @@ client.once('ready', () => {
 });
 
 client.on('message', async message => {
-    if(message.channel.name === 'community-suggestions'){
+    if(message.channel.name === 'community-suggestions' || message.channel.name === 'league-suggestions' || message.channel.name === 'suggestions'){
 		try {
             await message.react('⬆️');
             await message.react('⬇️');
@@ -39,4 +39,4 @@ client.on('message', async message => {
 });
 
 
-client.login("");    
+client.login(process.env.BOT_TOKEN);    
