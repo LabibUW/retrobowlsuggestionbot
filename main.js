@@ -7,6 +7,13 @@ var count = 0;
 
 client.once('ready', () => {
     console.log('RBL Suggestion Bot is online!');
+    client.user.setPresence({
+        status: "online",  // You can show online, idle... Do not disturb is dnd
+        game: {
+            name: "Retro Bowl",  // The message shown
+            type: "PLAYING" // PLAYING, WATCHING, LISTENING, STREAMING,
+        }
+    });
 });
 
 client.on('message', async message => {
