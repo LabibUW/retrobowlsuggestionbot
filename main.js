@@ -32,7 +32,7 @@ client.on('message', async message => {
 
         count++;
         if(count == SUGGESTION_MESSAGE_BREAK + 1) {
-            channel = client.channels.cache.get('779813840375250944');
+            channel = client.channels.cache.get('775745410353332294');
             // channel.send('Before posting a new suggestion, please read through the previous suggestions in <#775745410353332294> and <#704484560758374471> to avoid repeat suggestions.\n\nPlease **DO NOT** suggest to play as the defense or an Online mode. ');
 
             channel.send('Before posting a new suggestion, please read through the previous suggestions in <#775745410353332294> and <#704484560758374471> to avoid repeat suggestions.\n\nPlease **DO NOT** suggest to play as the defense or an Online mode. ')
