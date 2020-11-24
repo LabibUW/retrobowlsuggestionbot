@@ -23,7 +23,7 @@ client.on('message', async message => {
 
             channel.send('Before posting a new suggestion, please read through the previous suggestions in <#775745410353332294> and <#704484560758374471> to avoid repeat suggestions.\n\nPlease **DO NOT** suggest to play as the defense or an Online mode. ')
                 .then(msg => {
-                msg.delete({ timeout: 86400000 })
+                msg.delete({ timeout: 7200000 })
                 })
                 .catch(console.error);
             count = 0;
