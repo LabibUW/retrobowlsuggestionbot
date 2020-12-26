@@ -14,21 +14,7 @@ client.on('message', async message => {
     reactVote('league-suggestions', message);
     reactVote('suggestions', message);
     reactVote('community-suggestions', message);
-    if(message.channel.name === 'community-suggestions'){
-        count++;
-
-        if(count == SUGGESTION_MESSAGE_BREAK + 1) {
-            channel = client.channels.cache.get('775745410353332294');
-            // channel.send('Before posting a new suggestion, please read through the previous suggestions in <#775745410353332294> and <#704484560758374471> to avoid repeat suggestions.\n\nPlease **DO NOT** suggest to play as the defense or an Online mode. ');
-
-            channel.send('Before posting a new suggestion, please read through the previous suggestions in <#775745410353332294> and <#704484560758374471> to avoid repeat suggestions.\n\nPlease **DO NOT** suggest to play as the defense or an Online mode. ')
-                .then(msg => {
-                msg.delete({ timeout: 7200000 })
-                })
-                .catch(console.error);
-            count = 0;
-        }
-    }
+    
     
 });
 
