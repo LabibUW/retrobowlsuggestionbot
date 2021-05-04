@@ -13,7 +13,8 @@ client.once('ready', () => {
 client.on('message', async message => {
     reactVote('league-suggestions', message);
     reactVote('suggestions', message);
-    reactVote('community-suggestions', message);
+    reactVote('game-suggestions', message);
+	reactVote('server-suggestions', message);
     
     
 });
