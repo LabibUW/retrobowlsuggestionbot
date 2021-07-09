@@ -13,8 +13,9 @@ client.once('ready', () => {
 client.on('message', async message => {
     reactVote('league-suggestions', message);
     reactVote('suggestions', message);
-    reactVote('game-suggestions', message);
-	reactVote('server-suggestions', message);
+    reactVote('server-suggestions', message);
+    reactVote('retro-bowl-suggestions', message);
+    reactVote('retro-goal-suggestions', message);
     
     
 });
