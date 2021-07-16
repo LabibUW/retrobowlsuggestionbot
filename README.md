@@ -9,5 +9,5 @@ This chat bot is continuously being worked on and improved upon due to the needs
 ## Project setup
 
 ```
-npm start
+node main.js
 ```
