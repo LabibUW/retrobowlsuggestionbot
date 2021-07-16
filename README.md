@@ -5,3 +5,9 @@ This chat bot is continuously being worked on and improved upon due to the needs
 
 <p align="center">
 <img src="https://media.giphy.com/media/a6DB2HcRVD0Cw5tw1M/giphy.gif" width="80%"></p>
+
+## Project setup
+
+```
+npm start
+```
