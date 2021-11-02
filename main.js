@@ -17,17 +17,17 @@ client.on('message', async message => {
     reactVote('rb-suggestions', message);
     reactVote('rg-suggestions', message);
     
-    
-});
-
-bot.on('guildMemberAdd', async member => {
     const voiceChannelID = '903099777435205662';
 
     const voiceChannel = message.guild.channels.resolve(voiceChannelID);
     var memberCount = guild.members.filter(member => !member.user.bot).size;
 
     voiceChannel.setName('Members: ' + memberCount);
-})      
+});
+
+bot.on('guildMemberAdd', async member => {
+    
+});
 
 
 function reactVote(channel, message) {
