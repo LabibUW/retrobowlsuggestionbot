@@ -20,7 +20,7 @@ client.on('message', async message => {
     const voiceChannelID = '903099777435205662';
 
     const voiceChannel = message.guild.channels.resolve(voiceChannelID);
-    const memberCount = message.guild.memberCount
+    const memberCount = message.guild.memberCount;
 
     voiceChannel.setName('Members: ' + memberCount);
 });
