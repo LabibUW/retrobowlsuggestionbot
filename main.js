@@ -20,6 +20,16 @@ client.on('message', async message => {
     
 });
 
+bot.on('guildMemberAdd', async member => {
+    const voiceChannelID = '903099777435205662';
+
+    const voiceChannel = message.guild.channels.resolve(voiceChannelID);
+    var memberCount = guild.members.filter(member => !member.user.bot).size;
+
+    voiceChannel.setName('Members: ' + memberCount);
+})      
+
+
 function reactVote(channel, message) {
     if(message.channel.name === channel){
 		try {
