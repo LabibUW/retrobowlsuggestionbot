@@ -16,17 +16,7 @@ client.on('message', async message => {
     reactVote('server-suggestions', message);
     reactVote('rb-suggestions', message);
     reactVote('rg-suggestions', message);
-    
-    const voiceChannelID = '903099777435205662';
 
-    const voiceChannel = message.guild.channels.resolve(voiceChannelID);
-    const memberCount = message.guild.memberCount;
-
-    voiceChannel.setName('Members: ' + memberCount);
-});
-
-bot.on('guildMemberAdd', async member => {
-    
 });
 
 
