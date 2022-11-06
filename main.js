@@ -16,6 +16,7 @@ client.on('message', async message => {
     reactVote('server-suggestions', message);
     reactVote('rb-suggestions', message);
     reactVote('rg-suggestions', message);
+    reactOneVote('sports-predictions', message);
 
 });
 
@@ -25,6 +26,21 @@ function reactVote(channel, message) {
 		try {
             message.react('⬆️');
             message.react('⬇️');
+
+            if(message.content.startsWith("Before posting a new suggestion, please read through the previous suggestions")){
+                message.reactions.removeAll().catch(error => console.error('Failed to clear reactions: ', error));
+            }
+		} catch (error) {
+			console.error('One of the emojis failed to react.');
+        }
+    }
+}
+
+function reactOneVote(channel, message) {
+    if(message.channel.name === channel){
+		try {
+            message.react('1️⃣');
+            message.react('2️⃣');
 
             if(message.content.startsWith("Before posting a new suggestion, please read through the previous suggestions")){
                 message.reactions.removeAll().catch(error => console.error('Failed to clear reactions: ', error));
