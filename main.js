@@ -18,6 +18,7 @@ client.on('message', async message => {
     reactVote('rg-suggestions', message);
     reactVote('event-ideas', message);
     reactVote('rbc-suggestions', message);
+    reactVote('rbc-league-suggestions', message);
     reactOneVote('sports-predictions', message);
 });
 
